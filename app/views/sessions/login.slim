@@ -1,0 +1,6 @@
+== slim :'users/_errors' if @errors && @errors.any?
+div class='container'
+  form action='/login' method='post'
+    input name='user[email]' placeholder='Email'
+    input type='password' name='user[password]' placeholder='Password'
+    input type='submit' value='Sign In'

@@ -1,0 +1,5 @@
+div class ="container"
+  h1 Register Account
+  br
+  == slim :'users/_errors' if @errors && @errors.any?
+  == slim :'users/_form'
