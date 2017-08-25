@@ -1,0 +1,12 @@
+h2 "Hello, #{current_user.first_name}!"
+/ - if current_user.events.count > 0
+h3 Events
+  ul
+    - current_user.events.each do |event|
+      li
+        a href="/events/#{event.id}" = "#{event.title}"
+        a href="/events/#{event.id}/edit'" Edit Event
+  p
+    a href="/events/new"
+      | New Event
+
