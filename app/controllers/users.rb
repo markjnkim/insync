@@ -22,7 +22,6 @@ post '/users' do
 end
 
 get '/profile' do
-
   slim :'/users/show'
 end
 
@@ -32,4 +31,9 @@ end
 
 get '/users/:id' do
   slim :'users/show'
+end
+
+get '/users/events/:id' do
+  @event = Event.find(params[:id])
+  slim :'events/show'
 end
