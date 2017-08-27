@@ -19,7 +19,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 require 'slim'
 require 'erb'
-require 'pry-byebug'
+require 'pry-byebug' if development?
 
 
 # Some helper constants for path-centric logic
