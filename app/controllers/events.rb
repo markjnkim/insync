@@ -13,6 +13,7 @@ get '/events' do
 end
 
 post '/events' do
+  params[:event][:user_id] = current_user.id
   @event = Event.new(params[:event])
   if @event.save
     redirect :'/profile'

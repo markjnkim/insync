@@ -9,15 +9,3 @@ ul
     strong Please create a new party
 p
   a[href="/events/new"]  New Dish Party
-/ ul
-/   - if current_user.events
-/     - current_user.events.each do |event|
-/       li
-/         a href="/events/#{event.id}" = "#{event.title}"
-/         a href="/events/#{event.id}/edit'" Edit Event
-/   - else
-/     strong Please add an event
-/ p
-/   a href="/events/new"
-/     | New Event
-
