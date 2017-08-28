@@ -12,6 +12,7 @@ gem 'activerecord', '~>5.1.2'
 gem 'slim'
 gem 'rake'
 # gem 'heroku'
+gem 'httparty'
 gem 'shotgun', '~>0.9.1'
 # gem 'rails_12factor'
 group :test do
