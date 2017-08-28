@@ -21,8 +21,19 @@ post '/users' do
   end
 end
 
+# def parse_responses
+
+# end
+
 get '/profile' do
+  # url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
+  # uri = URI(url)
+  # response = Net::HTTP.get(uri)
+  # answer = JSON.parse(response)
+
+
   slim :'/users/show'
+
 end
 
 get '/users/new' do

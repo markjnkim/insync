@@ -1,9 +1,11 @@
 div class ="container"
-	h2 
+	h2
 	  = "Hello, #{current_user.first_name}!"
 
 	h3 Events
 	ul
+    - if current_user.dish
+      li: a[href="dishes/#{current_user.dish}"] = "#{current_user.dish}"
 	  - if current_user.events
 	    - current_user.events.each do |event|
 	      li: a[href="events/#{event.id}"] = "#{event.title}"
