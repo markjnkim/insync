@@ -1,11 +1,12 @@
-h2 "Hello, #{current_user.first_name}!"
+div class ="container"
+	h2 "Hello, #{current_user.first_name}!"
 
-h3 Events
-ul
-  - if current_user.events
-    - current_user.events.each do |event|
-      li: a[href="events/#{event.id}"] = "#{event.title}"
-  - else
-    strong Please create a new party
-p
-  a[href="/events/new"]  New Dish Party
+	h3 Events
+	ul
+	  - if current_user.events
+	    - current_user.events.each do |event|
+	      li: a[href="events/#{event.id}"] = "#{event.title}"
+	  - else
+	    strong Please create a new party
+	p
+	  a[href="/events/new"]  New Dish Party
