@@ -3,10 +3,11 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
   validates :first_name, :last_name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   validate :password_present
 # user has many events  -> user_id on events
-  has_many :events
+  has_many :invitees
+  has_many :events, through: :invitees
 
   def password
     @password ||= Password.new(hashed_password)

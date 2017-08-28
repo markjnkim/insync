@@ -1,12 +1,15 @@
 nav
   ul
     li.no-bullets
-      a href="/register"
-        | Register
+      - if current_user
+        a href="/users/#{current_user.id}"
+          = "#{current_user.first_name}"
+      - else
+        a href="/register"
+          | Register
     li.no-bullets
       - if current_user
         == slim :"sessions/logout"
       - else
         a href="/login"
           | Login
-

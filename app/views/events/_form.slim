@@ -1,0 +1,11 @@
+  input name='event[title]' placeholder='Title' value="#{@event.title}"
+  br
+  br
+  input name='event[start_time]' placeholder='Start Time' value="#{@event.start_time}"
+  br
+  br
+  input name='event[location]' placeholder='Location' value="#{@event.location}"
+  br
+  br
+  / - event[user_id] = "#{current_user.id}"
+  input type='submit' value='Post'

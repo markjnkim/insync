@@ -1,5 +1,16 @@
-h2 Event Details
+div class='container'
+	h2 Dish Party Details
 
-p: = "Title:  #{@event.title}"
-br
-p: = "Date:  #{@event.start_time.strftime(%b %e, %Y)}"
+	div class="col s7 push-s5"
+	  = "Title:  #{@event.title}"
+	br
+	div class="col s5 pull-s7"
+	  = "Date:  #{@event.date_start}"
+	br
+	  = "Time:  #{@event.time_start}"
+	br
+	div class="col s7 push-s5"
+	  = "Location:  #{@event.location}"
+
+	div class="col s5 pull-s7"
+	  a[href="/profile"] Back
